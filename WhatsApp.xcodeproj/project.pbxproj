@@ -14,6 +14,7 @@
 		0C55F95E1B12EBA1008DD2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F95D1B12EBA1008DD2E7 /* Images.xcassets */; };
 		0C55F9611B12EBA1008DD2E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C55F95F1B12EBA1008DD2E7 /* LaunchScreen.xib */; };
 		0C55F96D1B12EBA2008DD2E7 /* WhatsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F96C1B12EBA2008DD2E7 /* WhatsAppTests.m */; };
+		D19BC494DB3924EFCD5C7663 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 167BC81CB77342F8B6345B63 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		0C55F9661B12EBA2008DD2E7 /* WhatsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C55F96B1B12EBA2008DD2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C55F96C1B12EBA2008DD2E7 /* WhatsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatsAppTests.m; sourceTree = "<group>"; };
+		167BC81CB77342F8B6345B63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		46297E538A445E602FCB54AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C6FCD92FDC984BC0C9A6C6B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19BC494DB3924EFCD5C7663 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				0C55F94F1B12EBA1008DD2E7 /* WhatsApp */,
 				0C55F9691B12EBA2008DD2E7 /* WhatsAppTests */,
 				0C55F94E1B12EBA1008DD2E7 /* Products */,
+				31767720574221887DF9933D /* Pods */,
+				F3120D7DEC99288A34546FE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		31767720574221887DF9933D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCD92FDC984BC0C9A6C6B5 /* Pods.debug.xcconfig */,
+				46297E538A445E602FCB54AE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3120D7DEC99288A34546FE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167BC81CB77342F8B6345B63 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C55F9701B12EBA2008DD2E7 /* Build configuration list for PBXNativeTarget "WhatsApp" */;
 			buildPhases = (
+				09AD0857ADB1E3A0194104DA /* Check Pods Manifest.lock */,
 				0C55F9491B12EBA1008DD2E7 /* Sources */,
 				0C55F94A1B12EBA1008DD2E7 /* Frameworks */,
 				0C55F94B1B12EBA1008DD2E7 /* Resources */,
+				DFB89591FC503DB18FA1C7E9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09AD0857ADB1E3A0194104DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB89591FC503DB18FA1C7E9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C55F9491B12EBA1008DD2E7 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		0C55F9711B12EBA2008DD2E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6FCD92FDC984BC0C9A6C6B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhatsApp/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		0C55F9721B12EBA2008DD2E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46297E538A445E602FCB54AE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhatsApp/Info.plist;
@@ -416,6 +477,7 @@
 				0C55F9721B12EBA2008DD2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C55F9731B12EBA2008DD2E7 /* Build configuration list for PBXNativeTarget "WhatsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				0C55F9751B12EBA2008DD2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
