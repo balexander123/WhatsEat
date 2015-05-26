@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  FBViewController.m
 //  WhatsApp
 //
 //  Created by Barry Alexander on 5/24/15.
@@ -8,13 +8,13 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import "ViewController.h"
+#import "FBViewController.h"
 
-@interface ViewController ()
+@interface FBViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FBViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

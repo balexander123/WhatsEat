@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FBViewController.h
 //  WhatsApp
 //
 //  Created by Barry Alexander on 5/24/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FBViewController : UIViewController
 
 
 @end
