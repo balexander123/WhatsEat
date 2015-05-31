@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AsyncDisplayKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>467E1379DA56D3751E5B21CB</key>
+		<key>3FDE6A8989DB2B1D9023E891</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93AFB8F2BBD0877B328C6F8C</key>
+		<key>5B10866F63F3D1E206DA40E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B01044CF21CEE92A13C0BA7C</key>
+		<key>662FFA1AD65468817C502F4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E087C4547AEDACE235757C8F</key>
+		<key>9509A568B2A95B3C28D30AD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB03CE2AAC39664605D796C9</key>
+		<key>AAF9CA063752206BB6AF0371</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CEAEDD318350A083A3C36AFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
