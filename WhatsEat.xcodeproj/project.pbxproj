@@ -102,8 +102,7 @@
 				0C55F95F1B12EBA1008DD2E7 /* LaunchScreen.xib */,
 				0C55F9501B12EBA1008DD2E7 /* Supporting Files */,
 			);
-			name = WhatsEat;
-			path = ../WhatsEat/WhatsEat/WhatsEat;
+			path = WhatsEat;
 			sourceTree = "<group>";
 		};
 		0C55F9501B12EBA1008DD2E7 /* Supporting Files */ = {
