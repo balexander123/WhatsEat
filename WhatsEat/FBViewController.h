@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface FBViewController : UIViewController
+@interface FBViewController : UIViewController <FBSDKLoginButtonDelegate>
 
 
 @end

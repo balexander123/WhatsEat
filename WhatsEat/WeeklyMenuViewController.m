@@ -23,7 +23,13 @@
 {
     if (!(self = [super init]))
         return nil;
-    
+
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
@@ -32,12 +38,6 @@
     _collectionView.asyncDelegate = self;
     _collectionView.backgroundColor = [UIColor whiteColor];
     
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self.view addSubview:_collectionView];
 }
 
@@ -51,22 +51,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"prepareForSegue");
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 #pragma mark -
 #pragma mark ASCollectionView data source.
 
 - (ASCellNode *)collectionView:(ASCollectionView *)collectionView nodeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *text = [NSString stringWithFormat:@"[%zd.%zd] says hi", indexPath.section, indexPath.item];
+    NSString *text = [NSString stringWithFormat:@"[%zd.%zd] says hi                                                ", indexPath.section, indexPath.item];
     ASTextCellNode *node = [[ASTextCellNode alloc] init];
     node.text = text;
     node.backgroundColor = [UIColor lightGrayColor];
